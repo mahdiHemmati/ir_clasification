@@ -16,7 +16,7 @@ print("**** K-means clustering based on Y label ****")
 start = timeit.default_timer()
 
 df=pd.read_csv("IRminiProj#2_dataset.csv",encoding="ISO-8859-1")
-vectorizer = TfidfVectorizer(stop_words='english', lowercase=True)
+vectorizer = TfidfVectorizer(stop_words='english', lowercase=True, max_features=5000)
 
 X = df["Abstract"]
 Y = df["Y"]
